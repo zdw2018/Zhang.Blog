@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Zhang.Blog.HttpApi</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>..\Zhang.Blog.Web\Zhang.Blog.HttpApi.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Account.HttpApi" Version="4.3.0" />
+    <PackageReference Include="Volo.Abp.Identity.HttpApi" Version="4.3.0" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.HttpApi" Version="4.3.0" />
+    <PackageReference Include="Volo.Abp.TenantManagement.HttpApi" Version="4.3.0" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.HttpApi" Version="4.3.0" />
+    <PackageReference Include="Volo.Abp.SettingManagement.HttpApi" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Zhang.Blog.Application\Zhang.Blog.Application.csproj" />
+    <ProjectReference Include="..\Zhang.Blog.ToolKits\Zhang.Blog.ToolKits.csproj" />
+  </ItemGroup>
+
+</Project>
