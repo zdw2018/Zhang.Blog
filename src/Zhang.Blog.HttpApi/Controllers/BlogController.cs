@@ -4,11 +4,12 @@ using System.Threading.Tasks;
 using Volo.Abp.AspNetCore.Mvc;
 using Zhang.Blog.Application.Blog;
 using Zhang.Blog.Application.Contracts.Blog;
+using Zhang.Blog.Domain.Shared;
 using Zhang.Blog.ToolKits.Base;
 
 namespace Zhang.Blog.HttpApi.Controllers
 {
-
+    [ApiExplorerSettings( GroupName =Grouping.GroupName_v3)]
   public  class BlogController:AbpController
     {
         private readonly IBlogService _blogService;
